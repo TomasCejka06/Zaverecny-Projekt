@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentBook - Zeď</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h1>StudentBook</h1>
+        <div>
+            <a href="index.html">Zeď</a>
+            <a href="users.html">Uživatelé</a>
+            <a href="login.html">Odhlásit</a>
+        </div>
+    </nav>
+
+    <!-- FORM NA PŘÍSPĚVEK -->
+    <section class="post-form">
+        <h2>Přidat příspěvek</h2>
+        <input type="text" id="title" placeholder="Nadpis">
+        <textarea id="content" placeholder="Co se děje?"></textarea>
+        <input type="file" id="image">
+        <button onclick="addPost()">Přidat</button>
+    </section>
+
+    <!-- ZEĎ -->
+    <section id="posts">
+
+        <!-- PŘÍSPĚVEK -->
+        <div class="post">
+            <div class="post-header">
+                <img src="https://via.placeholder.com/40" alt="user">
+                <div>
+                    <strong>Jan Novák</strong>
+                    <p class="date">26.3.2026 14:30</p>
+                </div>
+            </div>
+
+            <h3>Nadpis příspěvku</h3>
+            <p>Toto je ukázkový příspěvek.</p>
+
+            <img class="post-image" src="https://via.placeholder.com/500x300">
+
+            <div class="post-actions">
+                <button onclick="likePost()">👍 Like (3)</button>
+            </div>
+
+            <!-- KOMENTÁŘE -->
+            <div class="comments">
+                <p><strong>Petr:</strong> Super!</p>
+                <p><strong>Eva:</strong> Souhlasím 👍</p>
+
+                <input type="text" placeholder="Napsat komentář...">
+                <button>Komentovat</button>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
