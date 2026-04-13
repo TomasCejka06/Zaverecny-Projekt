@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #1877f2;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FORM */
+.post-form {
+    background: white;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.post-form input,
+.post-form textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.post-form button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background: #1877f2;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* POSTS */
+#posts {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* POST */
+.post {
+    background: white;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-header img {
+    border-radius: 50%;
+}
+
+.date {
+    font-size: 12px;
+    color: gray;
+}
+
+.post-image {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* ACTIONS */
+.post-actions {
+    margin-top: 10px;
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* COMMENTS */
+.comments {
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.comments input {
+    width: 70%;
+    padding: 5px;
+}
+
+.comments button {
+    padding: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .post-form, #posts {
+        margin: 10px;
+    }
+}

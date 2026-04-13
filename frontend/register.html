@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+
+<h2>Registrace</h2>
+
+<input id="username" placeholder="username">
+<input id="password" type="password">
+<input id="firstname" placeholder="jméno">
+<input id="lastname" placeholder="příjmení">
+<input id="age" type="number" placeholder="věk">
+<select id="gender">
+    <option value="male">Muž</option>
+    <option value="female">Žena</option>
+</select>
+
+<button onclick="register()">Registrovat</button>
+
+<script>
+async function register(){
+    if(age.value < 13){
+        alert("Musíš mít 13+");
+        return;
+    }
+
+    await fetch("http://localhost:3000/api/register",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({
+            username:username.value,
+            password:password.value,
+            firstname:firstname.value,
+            lastname:lastname.value,
+            age:age.value,
+            gender:gender.value
+        })
+    });
+
+    location.href="login.html";
+}
+</script>
+
+</body>
+</html>

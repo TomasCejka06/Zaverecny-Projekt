@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+
+<h2>Uživatelé</h2>
+<div id="users"></div>
+
+<script>
+fetch("http://localhost:3000/api/users")
+.then(res=>res.json())
+.then(data=>{
+    users.innerHTML = data.map(u =>
+        `<p>${u.firstname} ${u.lastname} (${u.post_count})</p>`
+    ).join("");
+});
+</script>
+
+</body>
+</html>
